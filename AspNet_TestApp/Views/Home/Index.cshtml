@@ -8,23 +8,26 @@
     <title>Список услуг</title>
 </head>
 <body>
+    
     <h3>Услуги</h3>
-    <table  class="table table-hover">
-        <tr>
-            <td>Вид</td>
-            <td>Описание</td>
-            <td>Цена</td>
-            <td></td>
-        </tr>
-        @foreach (var service in Model)
-        {
+    <table class="table">
+        <thead class="thead-inverse">
             <tr>
-                <td>@service.Service_Name</td>
-                <td>@service.Service_Discription</td>
-                <td>@service.Service_Coast</td>
-                <td><a href="~/Home/Buy/@service.ServiceId">Выбрать услугу</a></td>
+                <td>Вид</td>
+                <td>Описание</td>
+                <td>Цена</td>
+                <td></td>
             </tr>
-        }
+            @foreach (var service in Model)
+            {
+                <tr>
+                    <td>@service.Service_Name</td>
+                    <td>@service.Service_Discription</td>
+                    <td>@service.Service_Coast</td>
+
+                    <td><a href="~/Home/Buy/@service.ServiceId">Выбрать услугу</a></td>
+                </tr>
+            }
     </table>
 </body>
 </html>

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AspNet_TestApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AspNet_TestApp.Controllers
 {
@@ -45,6 +46,7 @@ namespace AspNet_TestApp.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        [Authorize]
         [HttpGet]
        public IActionResult Buy(int id)
         {

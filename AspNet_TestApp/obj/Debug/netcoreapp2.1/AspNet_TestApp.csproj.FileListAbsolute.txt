@@ -39,3 +39,4 @@ E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\Razor\Areas\Id
 E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\_ViewImports.g.cshtml.cs
 E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
 E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
+E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\Razor\Views\Home\Register.g.cshtml.cs

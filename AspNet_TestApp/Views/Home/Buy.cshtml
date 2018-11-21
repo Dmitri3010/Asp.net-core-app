@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Оформление заказа";
 }
+<script src="~/js/daypilot-all.min.js" asp-append-version="true"></script>
 <h2>Форма оформления покупки</h2>
 
 <form method="post" class="form-horizontal" role="form">
@@ -29,4 +30,19 @@
             <input type="submit" class="btn btn-default" value="Отправить" />
         </div>
     </div>
+    <div class="main">
+        <div style="float:left; width: 150px;">
+            <div id="nav"></div>
+        </div>
+        <div style="margin-left: 150px;">
+            <div id="dp"></div>
+        </div>
+    </div>
+    <script>
+        var dp = new DayPilot.Calendar("dp");
+        dp.viewType = "Week";
+        dp.init();
+    </script>
+
+
 </form>
