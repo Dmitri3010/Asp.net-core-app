@@ -1,7 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Оформление заказа";
 }
-<script src="~/js/daypilot-all.min.js" asp-append-version="true"></script>
+
+<link href="~/css/datepicker.min.css" rel="stylesheet" type="text/css">
+
 <h2>Форма оформления покупки</h2>
 
 <form method="post" class="form-horizontal" role="form">
@@ -26,23 +28,66 @@
         </div>
     </div>
     <div class="form-group">
+        <label for="Address" class="col-md-2 control-label">Дата и время:</label>
+        <div class="col-md-4">
+            <input type='text' id='timepicker-actions-exmpl' class="form-control" />
+        </div>
+    </div>
+   
+    <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" class="btn btn-default" value="Отправить" />
         </div>
     </div>
-    <div class="main">
-        <div style="float:left; width: 150px;">
-            <div id="nav"></div>
-        </div>
-        <div style="margin-left: 150px;">
-            <div id="dp"></div>
-        </div>
-    </div>
-    <script>
-        var dp = new DayPilot.Calendar("dp");
-        dp.viewType = "Week";
-        dp.init();
-    </script>
 
+    @section Scripts{
+        <script src="~/js/datepicker.min.js" asp-append-version="true"></script>
+
+        <script>
+
+            var start = new Date(),
+                prevDay,
+                startHours = 9;
+
+           
+            start.setHours(9);
+            start.setMinutes(0);
+
+            
+            if ([6, 0].indexOf(start.getDay()) != -1) {
+                start.setHours(10);
+                startHours = 10
+            }
+
+            $('#timepicker-actions-exmpl').datepicker({
+                timepicker: true,
+                startDate: start,
+                minHours: startHours,
+                maxHours: 18,
+                onSelect: function (fd, d, picker) {
+                   
+                    if (!d) return;
+
+                    var day = d.getDay();
+
+                    if (prevDay != undefined && prevDay == day) return;
+                    prevDay = day;
+
+                    if (day == 6 || day == 0) {
+                        picker.update({
+                            minHours: 10,
+                            maxHours: 16
+                        })
+                    } else {
+                        picker.update({
+                            minHours: 9,
+                            maxHours: 18
+                        })
+                    }
+                }
+            })
+        </script>
+
+    }
 
 </form>
