@@ -15,5 +15,12 @@ namespace AspNet_TestApp.Models
         {
             Database.EnsureCreated();
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Order>()
+                .HasIndex(p => new { p.Data })
+                .IsUnique(true);
+        }
     }
 }

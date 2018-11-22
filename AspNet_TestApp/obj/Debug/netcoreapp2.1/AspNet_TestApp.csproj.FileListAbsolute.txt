@@ -9,7 +9,6 @@ E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\AspNet_TestApp
 E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\AspNet_TestApp.csproj.CoreCompileInputs.cache
 E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\AspNet_TestApp.RazorAssemblyInfo.cache
 E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\AspNet_TestApp.RazorAssemblyInfo.cs
-E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\AspNet_TestApp.AssemblyInfoInputs.cache
 E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\AspNet_TestApp.AssemblyInfo.cs
 E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\AspNet_TestApp.TagHelpers.input.cache
@@ -40,3 +39,6 @@ E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\Razor\Areas\Id
 E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
 E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
 E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\Razor\Views\Home\Register.g.cshtml.cs
+E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\Razor\Views\Home\ErrorView.g.cshtml.cs
+E:\projects\AspNet_TestApp\AspNet_TestApp\obj\Debug\netcoreapp2.1\Razor\Views\Home\randomName.g.cshtml.cs

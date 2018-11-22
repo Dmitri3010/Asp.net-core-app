@@ -54,12 +54,23 @@ namespace AspNet_TestApp.Controllers
             return View();
         }
         [HttpPost]
-        public string Buy(Order order)
+        public IActionResult randomName(Order order)
         {
-            db.Orders.Add(order);
-            // сохраняем в бд все изменения
-            db.SaveChanges();
-            return "Спасибо, " + order.User + ", за заказ!";
+            var tex = "";
+            try
+            {
+                db.Orders.Add(order);
+                db.SaveChanges();
+                tex = "success";
+            }
+            catch(Exception ex)
+            {
+                tex = "error";
+            }
+
+            ViewData["Message"] = tex;
+
+            return View();
         }
     }
 }

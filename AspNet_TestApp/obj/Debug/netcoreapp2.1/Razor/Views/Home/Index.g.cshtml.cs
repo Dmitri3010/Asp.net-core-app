@@ -61,7 +61,7 @@ using AspNet_TestApp.Models;
             WriteLiteral("\r\n<html>\r\n");
             EndContext();
             BeginContext(114, 48, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "528ae5e9aa044a4ea01372c29189094e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "535a723dfcb74977bb73d8f2a6befa44", async() => {
                 BeginContext(120, 35, true);
                 WriteLiteral("\r\n    <title>Список услуг</title>\r\n");
                 EndContext();
@@ -81,7 +81,7 @@ using AspNet_TestApp.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(164, 657, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "489dea17e4e640c7928fddc472ab9b33", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "278b4ae418494453b8073c2f0e1639ef", async() => {
                 BeginContext(170, 255, true);
                 WriteLiteral("\r\n    \r\n    <h3>Услуги</h3>\r\n    <table class=\"table\">\r\n        <thead class=\"thead-inverse\">\r\n            <tr>\r\n                <td>Вид</td>\r\n                <td>Описание</td>\r\n                <td>Цена</td>\r\n                <td></td>\r\n            </tr>\r\n");
                 EndContext();
@@ -125,7 +125,7 @@ using AspNet_TestApp.Models;
                 WriteLiteral("</td>\r\n\r\n                    <td>");
                 EndContext();
                 BeginContext(697, 58, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "95f2a1fbfb8a42f6a5fdc03eb130cfb3", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8ee4e5d326954b00838bd03a0a4b196a", async() => {
                     BeginContext(737, 14, true);
                     WriteLiteral("Выбрать услугу");
                     EndContext();
