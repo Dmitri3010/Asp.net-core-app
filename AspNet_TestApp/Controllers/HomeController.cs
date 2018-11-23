@@ -5,7 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AspNet_TestApp.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Localization;
 
 namespace AspNet_TestApp.Controllers
 {
@@ -32,6 +34,10 @@ namespace AspNet_TestApp.Controllers
         {
             ViewData["Message"] = "Your contact page.";
 
+            return View();
+        }
+        public IActionResult Details()
+        {
             return View();
         }
 
@@ -61,16 +67,30 @@ namespace AspNet_TestApp.Controllers
             {
                 db.Orders.Add(order);
                 db.SaveChanges();
-                tex = "success";
+                tex = "Заказ оформлен. Спасибо";
             }
             catch(Exception ex)
             {
-                tex = "error";
+                tex = "Данное время занято, выберите пожалуйста другое";
             }
 
             ViewData["Message"] = tex;
 
             return View();
         }
+
+        [HttpPost]
+        public IActionResult SetLanguage(string culture, string returnUrl)
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+            );
+
+            return LocalRedirect(returnUrl);
+        }
+
+
     }
 }
