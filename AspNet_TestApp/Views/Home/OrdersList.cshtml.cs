@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AspNet_TestApp.Views.Home
 {
-    public class Index1Model : PageModel
+    public class OrdersListModel : PageModel
     {
         public void OnGet()
         {

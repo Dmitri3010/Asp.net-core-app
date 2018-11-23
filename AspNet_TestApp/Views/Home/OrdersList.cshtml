@@ -1,0 +1,30 @@
+﻿@model IEnumerable<AspNet_TestApp.Models.Order>
+@{
+    ViewData["Title"] = "Список заказов";
+}
+
+
+<h3>Заказы</h3>
+<table class="table">
+    <thead class="thead-inverse">
+        <tr>
+            <td>Имя</td>
+            <td>Адрес</td>
+            <td>Телефон</td>
+            <td>Дата</td>
+            <td></td>
+        </tr>
+
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.User</td>
+                <td>@order.Address</td>
+                <td>@order.ContactPhone</td>
+                <td>@order.Data</td>
+
+
+            </tr>
+        }
+        
+</table>

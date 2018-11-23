@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using AspNet_TestApp.Data;
 using AspNet_TestApp.Models;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -20,11 +17,18 @@ namespace AspNet_TestApp
             var host = CreateWebHostBuilder(args).Build();
             using (var scope = host.Services.CreateScope())
             {
+              
                 var services = scope.ServiceProvider;
+                Task t;
                 try
                 {
+                    var userManager = services.GetRequiredService<UserManager<IdentityUser>>();
+                    var rolesManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+                    t=RoleInitializer.InitializeAsync(userManager, rolesManager);
+                    t.Wait();
                     var context = services.GetRequiredService<ServicesContext>();
                     ServiceData.Init(context);
+                    
                 }
                 catch (Exception ex)
                 {

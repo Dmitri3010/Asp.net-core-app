@@ -14,12 +14,14 @@ namespace AspNet_TestApp.Controllers
     public class HomeController : Controller
     {
         ServicesContext db;
+
         public HomeController(ServicesContext context)
         {
             db = context;
         }
         public IActionResult Index()
         {
+           
             return View(db.Services.ToList());
         }
 
@@ -69,7 +71,7 @@ namespace AspNet_TestApp.Controllers
                 db.SaveChanges();
                 tex = "Заказ оформлен. Спасибо";
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 tex = "Данное время занято, выберите пожалуйста другое";
             }
@@ -89,6 +91,12 @@ namespace AspNet_TestApp.Controllers
             );
 
             return LocalRedirect(returnUrl);
+        }
+
+        public IActionResult OrdersList()
+        {
+
+            return View(db.Orders.ToList());
         }
 
 

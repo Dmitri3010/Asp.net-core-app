@@ -23,6 +23,17 @@ body {
     width: 100%;
 }
 
+.carousel slide {
+    margin-top: 100px;
+}
+
+.carousel {
+    
+  
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
 /* QR code generator */
 #qrCode {
     margin: 15px;

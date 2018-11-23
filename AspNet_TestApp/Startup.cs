@@ -7,6 +7,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AspNet_TestApp.Models;
+using System.Threading.Tasks;
+using System;
+using Microsoft.Extensions.Logging;
 
 namespace AspNet_TestApp
 {
@@ -24,15 +27,19 @@ namespace AspNet_TestApp
         {
             services.Configure<CookiePolicyOptions>(options =>
             {
-                
+
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-           
+
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
-                    .AddEntityFrameworkStores<ApplicationContext>();
+            services.AddIdentity<IdentityUser, IdentityRole>()
+    //services.AddDefaultIdentity<IdentityUser>()
+    .AddEntityFrameworkStores<ApplicationContext>()
+    .AddDefaultUI()
+    .AddDefaultTokenProviders();
+
 
             services.AddDbContext<ServicesContext>(options =>
                 options.UseSqlServer(
@@ -43,12 +50,12 @@ namespace AspNet_TestApp
                 googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
                 googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
             });
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-                        
+           
+
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -60,7 +67,7 @@ namespace AspNet_TestApp
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-
+           
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
@@ -73,6 +80,8 @@ namespace AspNet_TestApp
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+         
         }
+       
     }
 }

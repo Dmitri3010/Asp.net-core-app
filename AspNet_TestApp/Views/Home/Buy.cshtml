@@ -30,7 +30,7 @@
     <div class="form-group">
         <label for="Address" class="col-md-2 control-label">Дата и время:</label>
         <div class="col-md-4">
-            <input type='text' name="Data" id='timepicker-actions-exmpl' class="form-control" />
+            <input type='text' name="Data" id='timepicker-actions-exmpl' class="form-control"  />
         </div>
     </div>
 
@@ -48,11 +48,13 @@
 
             var start = new Date(),
                 prevDay,
+               
                 startHours = 9;
 
 
             start.setHours(9);
             start.setMinutes(0);
+            
 
 
             if ([6, 0].indexOf(start.getDay()) != -1) {
@@ -65,6 +67,9 @@
                 startDate: start,
                 minHours: startHours,
                 maxHours: 18,
+                minutesStep: 30,
+             
+                
 
                 onSelect: function (fd, d, picker) {
 
@@ -78,12 +83,15 @@
                     if (day == 6 || day == 0) {
                         picker.update({
                             minHours: 10,
-                            maxHours: 16
+                            maxHours: 16,
+                             
+                            
                         })
                     } else {
                         picker.update({
                             minHours: 9,
-                            maxHours: 18
+                            maxHours: 18,
+                           
                         })
                     }
                 }
