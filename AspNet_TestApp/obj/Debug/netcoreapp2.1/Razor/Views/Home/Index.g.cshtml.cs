@@ -64,7 +64,7 @@ using AspNet_TestApp.Models;
             WriteLiteral("\r\n<html>\r\n");
             EndContext();
             BeginContext(118, 50, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2b4788c76e0a415a8642ede719eb173a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f7165946931044ad86bc558d4de73fda", async() => {
                 BeginContext(124, 37, true);
                 WriteLiteral("\r\n\r\n    <title>Список услуг</title>\r\n");
                 EndContext();
@@ -84,7 +84,7 @@ using AspNet_TestApp.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(170, 2116, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "60f33c4f17e3485cbedaa82e4a0f1fc3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a0773f5d6f91451dab706a214f819728", async() => {
                 BeginContext(176, 1695, true);
                 WriteLiteral(@"
     <div id=""myCarousel"" class=""carousel slide"" data-ride=""carousel"">
@@ -176,7 +176,7 @@ using AspNet_TestApp.Models;
                 WriteLiteral("</td>\r\n\r\n                    <td>");
                 EndContext();
                 BeginContext(2143, 58, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4217c523898548ee822e8550ea5b6489", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c72975e1c2e047968d0f15b981e5d4cb", async() => {
                     BeginContext(2183, 14, true);
                     WriteLiteral("Выбрать услугу");
                     EndContext();
